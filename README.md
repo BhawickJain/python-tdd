@@ -22,7 +22,7 @@ Met with compatibility issues, deeper look into Spacey library version and its m
 `[x]` Use `requirements.txt` instead of `setup.py`  
 
 
-__TODO__
+__TODO__  
 `[ ]` Look into Flask and make a comparison with Node.js  
 `[ ]` Annotate and understand how the table generation works  
 `[ ]` Find a small example set for TDD to isolate concepts in simpler form.  
