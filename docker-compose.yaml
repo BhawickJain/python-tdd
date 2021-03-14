@@ -5,11 +5,9 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./app /usr/src/workspace/app
-      - logvolume01:/var/log
-    links:
-      - redis
-  redis:
-    image: redis
-volumes:
-  logvolume01: {}
+      - ./app:/usr/src/app
+    working_dir: /usr/src/app
+    entrypoint: ["python"]
+    command: ["app.py"]
+    # command: ["sleep", "10m"]
+

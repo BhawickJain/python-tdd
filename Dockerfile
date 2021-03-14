@@ -1,5 +1,5 @@
-FROM python:rc-alpine3.13
-RUN mkdir -p usr/src/workspace
-WORKDIR /usr/src/workspace
-COPY requirements.txt .
-RUN pip install ./app/setup.py
+FROM python:3
+WORKDIR /usr/src/app
+COPY ./app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN spacy download en_core_web_sm
